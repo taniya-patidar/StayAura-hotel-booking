@@ -12,7 +12,7 @@ const Hero = () => {
         className="absolute inset-0"
         initial={{ scale: 1.2 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 6, ease: "easeOut" }}
+        transition={{ duration: 8, ease: "easeOut" }}
         style={{ backgroundImage: `url(${img})` }}
       />
 
@@ -59,7 +59,7 @@ const Hero = () => {
         <motion.button
           className="bg-teal-600 px-8 py-4 rounded-xl text-white font-semibold text-lg shadow-lg"
           variants={{
-            hidden: { scale: 0.8, opacity: 0 },
+            hidden: { scale: 0.6, opacity: 0 },
             visible: {
               scale: 1,
               opacity: 1,

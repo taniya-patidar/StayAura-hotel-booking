@@ -19,7 +19,10 @@
 .Logo{
   display: flex;
   align-items: center;
-  height: 140px;
-  width: 140px;
+  height: 110px;
+  width: 110px;
   border-radius: 50%;
+  /* border: 2px solid black; */
+  /* background-position: center; */
+
 }

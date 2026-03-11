@@ -1,4 +1,5 @@
 import logo from "../assets/StayAura.jpeg";
+import {Link} from "react-router-dom";
 import { motion } from "framer-motion";  
 
 const Navbar = () => {
@@ -53,16 +54,22 @@ const Navbar = () => {
       animate="visible"
        className="NavContent flex gap-10 text-gray-700 font-semibold"
       >
-        {["Home","Hotels","About","Contact","Service","Details"].map((item, index)=>(
-            <motion.a
+        {[
+  {name:"Home", path:"/"},
+  {name:"Hotels", path:"/hotels"},
+  {name:"About", path:"/about"},
+  {name:"Contact", path:"/contact"}
+    
+].map((item, index)=>(
+            <motion.div 
             key={index}
             variants={linkItem}
-            href="#"
+          
            whileHover={{ y: -6, scale: 1.05 }}
-            className="relative group">
-                {item}
+            className="relative group cursor-pointer">
+                <Link to={item.path}>{item.name}</Link>
                 <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
-            </motion.a>
+            </motion.div>
         ))}
       </motion.div>
       <div></div>
