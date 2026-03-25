@@ -1,7 +1,10 @@
 import img from "../assets/luxHotel.jpg";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <div
       className="h-screen bg-cover bg-center relative flex items-center justify-center overflow-hidden"
@@ -57,6 +60,7 @@ const Hero = () => {
 
         {/* Button */}
         <motion.button
+          onClick={() => navigate("/hotels")}  // ✅ functionality add
           className="bg-teal-600 px-8 py-4 rounded-xl text-white font-semibold text-lg shadow-lg"
           variants={{
             hidden: { scale: 0.6, opacity: 0 },
