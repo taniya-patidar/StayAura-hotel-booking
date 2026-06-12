@@ -94,7 +94,8 @@ const Navbar = () => {
           { name: "Home", path: "/" },
           { name: "Hotels", path: "/hotels" },
           { name: "About", path: "/about" },
-          { name: "Contact", path: "/contact" }
+          { name: "Contact", path: "/contact" },
+          { name: "My Bookings", path: "/my-bookings" }
         ].map((item, index) => (
           <motion.div
             key={index}

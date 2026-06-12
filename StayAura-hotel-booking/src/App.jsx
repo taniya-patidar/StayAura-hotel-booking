@@ -6,6 +6,11 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Hotels from "./Pages/Hotels";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import HotelDetails from "./Pages/HotelDetails";
+import BookingForm from "./Pages/BookingForm";
+import MyBookings from "./Pages/MyBookings";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -23,8 +28,12 @@ const App = () => {
 />
 
         {/* NEW */}
-        <Route path="/about" element={<h1 className="p-10 text-3xl">About Page</h1>} />
-        <Route path="/contact" element={<h1 className="p-10 text-3xl">Contact Page</h1>} />
+        
+        <Route path="/hotel/:id" element={<HotelDetails />} />
+        <Route path="/booking/:id" element={<BookingForm />}/>
+        <Route path="/my-bookings" element={<MyBookings />}/>
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
